@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Meghana Boda
+- **Dot Number**: Boda.21
+- **Due Date**: 02/05/2025 @3pm
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,7 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
 
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
@@ -67,7 +64,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,15 +102,10 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+In my freetime, I love to explore music and dance. I'm extremely interested in the arts even though that may not be something I'd like to pursue as a career. However, I'd love to have a part time job as a dance teacher as I grow older. In the academic space, I'm passionate about machine learning and cybersecurity to contribute to a better society. Outside of that, I absolutely love binging a good show or watching movies and traveling is one of my favorite things today. Beach locations are some of my favorite spots and I also love the mountains.
 
 ## Assignment
 
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
@@ -122,7 +113,6 @@ that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
 
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -132,7 +122,6 @@ you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
 
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +189,96 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Task Manager
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the organization and management of to-do lists. It allows to manage tasks based on priority, deadline, or status and helps users manage tasks efficiently.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addTask(Task t)`: adds a new task to the task manager
+    - `void removeTask(Task t)`: removes a task from the task manager
+    - `boolean isEmpty()`: checks if there are any tasks in the task manager
+    - `Task getTaskAt(int index)`: retrieves a task at a specific index in the task manager
+    - `void changeStatus(Task t, String status)`: updates the status of the task to complete or incomplete
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void sortByPriority()`: sorts the tasks by their priority (e.g., high, medium, low)
+    - `void sortByDeadline()`: sorts the tasks by their deadline date
+    - `void sortByStatus()`: sorts the tasks by their status (e.g., pending, in progress, completed)
+    - `List<Task> getTasksByStatus(String status)`: retrieves a list of tasks with a specific status
+    - `Task searchByTitle(String title)`: searches for a task by its title
+    - `List<Task> getOverdueTasks()`: retrieves a list of tasks that have missed their deadline
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the task manager will be getting updated as tasks are getting added, removed, completed, and sorted.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think so.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - The component would benefit from using enums for the Status (e.g., PENDING, IN_PROGRESS, COMPLETED) and Priority (e.g., HIGH, MEDIUM, LOW) of tasks. These enums provide better organization, validation, and readability, helping ensure tasks are in the correct state and can be easily sorted.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example, searchByTitle(String title) could use a while loop and loop through all the elements and use the getTaskAt method once it finds the correct one.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The purpose of this component is to model the organization of songs in a playlist. The intent of the design is to keep an ordered list of songs with basic operations to manage the playlist.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addSong(Song s)`: adds a song to the playlist
+    - `void removeSong(Song s)`: removes a song to the playlist
+    - `void playNext()`: removes a song from the playlist
+    - `void skip()`: skips the current song and moves to the next one
+    - `boolean isEmpty()`: checks if the playlist is empty
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void moveSong(int fromIndex, int toIndex)`: moves a song from one position to another in the playlist
+    - `Song getSongAt(int index)`: retrieves the song at a specific index
+    - `void shuffle()`: shuffles the order of the playlist
+    - `int getTotalDuration()`: returns the total duration of all songs in the playlist
+    - `void playSongAt(int index)`: plays a specific song at a given index
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it is meant to change as songs are added, removed, rearranged, etc., modifying the state of the playlist
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think it wouldn't but I'm not completely sure right now
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No, it's pretty straightforward
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, many of the secondary methods can be implemented
+using the kernel methods. The method moveSong(int fromIndex, int toIndex) could be implemented by first removing the song at fromIndex using removeSong() and then adding it back at toIndex using addSong(). Similarly, shuffle() can be implemented by repeatedly calling removeSong() and addSong() in a random order.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Data Analysis Dashboard
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The Data Analysis Dashboard component models an interactive dashboard for analyzing various data sources. It allows users to load datasets, apply transformations, calculate summary stats, and visualize trends.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void loadData(String datasetName, List<DataPoint> data)`: loads a new dataset into the dashboard
+    - `void applyTransformation(String transformationType)`: applies a specific transformation to the data (e.g., normalization, scaling, or filtering)
+    - `double calculateMean(String column)`: calculates the mean of a given column in the dataset
+    - `double calculateMedian(String column)`: calculates the median of a given column
+    - `double calculateStandardDeviation(String column)`: calculates the standard deviation for a given column
+    - `List<String> getColumnNames()`: returns the column names in the dataset
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `List<Double> plotHistogram(String column)`: generates a histogram of a specified column's data to analyze the distribution
+    - `double calculateCorrelation(String column1, String column2)`: calculates the correlation between two columns in the dataset
+    - `double calculateSkewness(String column)`: calculates the skewness of a column to understand its distribution
+    - `List<String> filterData(String column, String condition)`: filters data based on a condition applied to a specific column (e.g., "greater than 50")
+    - `String getTopPerformingCategory(String column)`: identifies and returns the category with the highest average value in a given column
+    - `void createPivotTable(String rowColumn, String aggColumn)`: generates a pivot table by aggregating data based on rows and columns (e.g., sum, average)
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, the component would allow users to load new datasets, apply transoformations, etc.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Potentially a Map<String, List> might be used to store the columns and their corresponding values for efficient access and manipulation
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I think so but not sure yet
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, plotHistogram(String column) can leverage calculateMean() and calculateStandardDeviation() to plot relevant data points
 
 ## Post-Assignment
 
@@ -270,7 +287,6 @@ completed the assignment.
 
 ### Changelog
 
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
